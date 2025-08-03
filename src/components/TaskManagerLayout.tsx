@@ -1,12 +1,15 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { SidebarProvider } from '@/components/ui/sidebar';
+// Update the import path to the correct relative path if the file exists
+import { SidebarProvider } from '../components/ui/sidebar';
+// Or, if SidebarProvider is not available, remove the import and its usage
+// import { SidebarProvider } from '../components/ui/sidebar';
 import { TaskSidebar } from './task/TaskSidebar';
 import { TaskWorkspace } from './task/TaskWorkspace';
 import { PomodoroTimer } from './pomodoro/PomodoroTimer';
 import { NotificationCenter } from './notifications/NotificationCenter';
-import { TaskPage, Task, Notification } from '@/types/task';
-import { Button } from '@/components/ui/button';
+import { TaskPage, Task, Notification } from '../types/task';
+import { Button } from '../components/ui/button';
 import { Timer, Bell, Plus } from 'lucide-react';
 
 export function TaskManagerLayout() {
