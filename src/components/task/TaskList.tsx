@@ -22,7 +22,7 @@ export function TaskList({
 }: TaskListProps) {
   const [groupBy, setGroupBy] = useState<'none' | 'priority' | 'status'>('none');
 
-  const groupedTasks = () => {
+  const groupedTasks = (): Record<string, Task[]> => {
     if (groupBy === 'none') return { 'All Tasks': tasks };
     
     if (groupBy === 'priority') {
